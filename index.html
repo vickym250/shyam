@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Singer Portfolio</title>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ACTIVE LINK STYLE -->
+  <style>
+    .active-link {
+      color: white !important;
+      font-weight: 600;
+      border-bottom: 2px solid #22c55e;
+      padding-bottom: 3px;
+      transition: 0.3s;
+    }
+    .nav-link:hover,
+    .mobile-link:hover {
+      color: white;
+      transition: 0.3s;
+    }
+     .typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #22c55e; /* green cursor */
+    width: 0;
+    animation: typing 3s steps(30) forwards, blink 0.7s infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  </style>
+</head>
+
+<body class="bg-black text-white">
+
+<!---------------------- NAVBAR -------------------------->
+<nav class="w-full py-4 bg-[#101010] sticky top-0 z-50 border-b border-gray-800">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6">
+
+    <!-- LOGO -->
+    <div class="flex items-center gap-3">
+      <img src="image1.jpeg" class="w-10 h-10 rounded-full object-cover" alt="Logo" />
+      <h1 class="text-white font-semibold text-lg">Shyam Bihari</h1>
+    </div>
+
+    <!-- MENU (Desktop) -->
+    <ul id="menuList" class="hidden md:flex gap-8 text-sm text-gray-300">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <!-- SOCIAL ICONS -->
+    <div class="hidden md:flex gap-6 text-gray-300 text-xl">
+     <a href="https://www.facebook.com/shyambihari.rajbhar.37"> <ion-icon name="logo-facebook"></ion-icon></a>
+     <a href="https://www.instagram.com/shyambihari_official/?hl=en" target="_blank">
+  <ion-icon name="logo-instagram"></ion-icon>
+</a>
+     <a href="https://www.youtube.com/@ShyamBihariOfficial143" target="_blank">
+  <ion-icon name="logo-youtube" ></ion-icon>
+</a>
+    </div>
+
+    <!-- MOBILE BUTTON -->
+    <button id="menuBtn" class="md:hidden text-white text-3xl">
+      ☰
+    </button>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden bg-[#0b0b0b] p-6 space-y-4 text-gray-300">
+
+    <div class="flex gap-6 text-xl mb-4">
+      <ion-icon name="logo-linkedin"></ion-icon>
+      <ion-icon name="logo-instagram"></ion-icon>
+      <ion-icon name="logo-youtube"></ion-icon>
+    </div>
+
+    <a href="#home" class="mobile-link block">Home</a>
+    <a href="#about" class="mobile-link block">About</a>
+    <a href="#projects" class="mobile-link block">Projects</a>
+    <a href="#contact" class="mobile-link block">Contact</a>
+  </div>
+</nav>
+
+<!---------------------- HERO -------------------------->
+<!-- HERO SECTION UPDATED -->
+<section id="home" class="max-w-7xl mx-auto px-6 flex items-center py-16">
+
+  <div class="grid md:grid-cols-2 gap-12 items-center w-full">
+
+    <!-- MOBILE IMAGE TOP -->
+    <div class="flex justify-center md:hidden">
+      <img 
+        src="image1.jpeg"
+        class="w-56 h-56 sm:w-64 sm:h-64 object-cover rounded-full shadow-xl"
+        data-aos="fade-left"
+        alt="Profile Photo">
+    </div>
+
+    <!-- HERO CONTENT -->
+    <div class="text-center md:text-left" data-aos="fade-right">
+     <h1 class="typewriter text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+  I Am Shyam Bihari
+</h1>
+      <p class="text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed mb-10">
+        I am a Singer, Music Composer & Live Performer.<br />
+        I create soulful music that connects people with emotions.
+      </p>
+
+      <a href="#contact"
+        class="inline-block bg-green-600 text-white text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 font-semibold rounded-lg shadow-lg hover:bg-green-700">
+        Book Me →
+      </a>
+
+      <!-- SOCIAL LINKS -->
+      <div class="mt-12 sm:mt-14">
+        <p class="text-sm text-gray-400 mb-3">Follow Me On</p>
+
+        <div class="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4">
+
+          <a href="https://www.instagram.com/shyambihari_official/?hl=en" target="_blank"
+            class="flex items-center gap-2 bg-[#111] px-5 py-2 rounded-lg text-gray-300 hover:bg-[#1a1a1a]">
+            <ion-icon name="logo-instagram" class="text-pink-500 text-xl"></ion-icon>
+            <span>Instagram</span>
+          </a>
+
+          <a href="https://www.facebook.com/shyambihari.rajbhar.37" target="_blank"
+            class="flex items-center gap-2 bg-[#111] px-5 py-2 rounded-lg text-gray-300 hover:bg-[#1a1a1a]">
+            <ion-icon name="logo-facebook" class="text-blue-500 text-xl"></ion-icon>
+            <span>Facebook</span>
+          </a>
+
+          <a href="https://www.youtube.com/@ShyamBihariOfficial143" target="_blank"
+            class="flex items-center gap-2 bg-[#111] px-5 py-2 rounded-lg text-gray-300 hover:bg-[#1a1a1a]">
+            <ion-icon name="logo-youtube" class="text-red-500 text-xl"></ion-icon>
+            <span>YouTube</span>
+          </a>
+
+          <a href="https://twitter.com/YOUR_ID" target="_blank"
+            class="flex items-center gap-2 bg-[#111] px-5 py-2 rounded-lg text-gray-300 hover:bg-[#1a1a1a]">
+            <ion-icon name="logo-twitter" class="text-sky-400 text-xl"></ion-icon>
+            <span>Twitter</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- DESKTOP IMAGE RIGHT SIDE (AOS Added Here Also) -->
+    <div class="hidden md:flex justify-center">
+      <img 
+        src="image1.jpeg"
+        class="w-[350px] h-[350px] lg:w-[420px] lg:h-[420px] object-cover rounded-full shadow-2xl"
+        data-aos="fade-left"
+        alt="Profile Photo">
+    </div>
+
+  </div>
+</section>
+
+
+
+<!---------------------- ABOUT -------------------------->
+<section id="about" class="max-w-7xl mx-auto px-6 py-24">
+  <!-- HEADING -->
+  <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+    About Me
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- LEFT IMAGE -->
+    <div data-aos="fade-right">
+      <img 
+        src="image2.jpeg" 
+        class="rounded-2xl shadow-2xl w-full h-auto object-cover border border-gray-700"
+        alt="Singer Image"
+      />
+    </div>
+
+    <!-- RIGHT TEXT -->
+    <div data-aos="fade-left">
+
+      <p class="text-gray-300 text-lg leading-relaxed">
+        I am a passionate singer with over 
+        <span class="text-white font-semibold">5+ years of experience</span> 
+        in live shows, studio recording and modern music production.
+      </p>
+
+      <p class="text-gray-400 mt-4 text-lg">
+        I’ve performed in <span class="text-white font-semibold">300+ events</span> across India including:
+      </p>
+
+      <ul class="text-gray-300 mt-5 space-y-3 ml-1">
+        <li class="flex items-center gap-3">
+          <ion-icon name="musical-notes-outline" class="text-green-400 text-xl"></ion-icon>
+          College Fests & Cultural Events
+        </li>
+
+        <li class="flex items-center gap-3">
+          <ion-icon name="heart-outline" class="text-green-400 text-xl"></ion-icon>
+          Weddings & Private Shows
+        </li>
+
+        <li class="flex items-center gap-3">
+          <ion-icon name="briefcase-outline" class="text-green-400 text-xl"></ion-icon>
+          Corporate Events
+        </li>
+
+        <li class="flex items-center gap-3">
+          <ion-icon name="mic-outline" class="text-green-400 text-xl"></ion-icon>
+          Live Concert Performances
+        </li>
+      </ul>
+
+      <p class="text-gray-300 text-lg leading-relaxed mt-6">
+        I specialize in 
+        <span class="text-white font-semibold">
+          Bollywood • Indie • Classical • Romantic
+        </span>
+        genres and aim to create music that touches hearts.
+      </p>
+
+      <!-- SMALL SIGNATURE -->
+      <div class="mt-8 text-gray-400 text-sm">
+        ~ Music is not just my passion, it’s my identity.
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!---------------------- PROJECTS -------------------------->
+<section id="projects" class="max-w-7xl mx-auto px-6 py-20">
+  <h2 class="text-4xl font-bold mb-8">Projects</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- CARD 1 -->
+    <div class="bg-[#111] rounded-xl p-5 shadow-lg hover:scale-105 duration-300" data-aos="zoom-in-up">
+      <div class="relative w-full pb-[56.25%] rounded-lg overflow-hidden">
+        <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
+          src="https://www.youtube.com/embed/MA-7FatrdkE" allowfullscreen></iframe>
+      </div>
+      <h3 class="text-xl font-semibold mt-4 mb-2">Live Concert Show</h3>
+      <p class="text-gray-400 text-sm">Performed in front of 10,000+ audience live.</p>
+    </div>
+
+    <div class="bg-[#111] rounded-xl p-5 shadow-lg hover:scale-105 duration-300" data-aos="zoom-in-up">
+      <div class="relative w-full pb-[56.25%] rounded-lg overflow-hidden">
+        <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
+          src="https://www.youtube.com/embed/KOWfsz-R2Yw" allowfullscreen></iframe>
+      </div>
+      <h3 class="text-xl font-semibold mt-4 mb-2">Music Show</h3>
+      <p class="text-gray-400 text-sm">Live performance at special event.</p>
+    </div>
+
+    <div class="bg-[#111] rounded-xl p-5 shadow-lg hover:scale-105 duration-300" data-aos="zoom-in-up">
+      <div class="relative w-full pb-[56.25%] rounded-lg overflow-hidden">
+        <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
+          src="https://www.youtube.com/embed/F3RamCY42wE" allowfullscreen></iframe>
+      </div>
+      <h3 class="text-xl font-semibold mt-4 mb-2">Studio Recording</h3>
+      <p class="text-gray-400 text-sm">Recorded vocals for music labels.</p>
+    </div>
+
+  </div>
+</section>
+
+<!---------------------- CONTACT -------------------------->
+<section id="contact" class="max-w-7xl mx-auto px-6 py-20">
+  <h2 class="text-4xl font-bold mb-10 text-center">Contact Me</h2>
+
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- LEFT SIDE CONTENT + FORM -->
+    <div data-aos="fade-right">
+
+      <!-- CONTACT DETAILS -->
+      <div class="mb-8 space-y-4">
+        
+        <p class="flex items-center gap-3 text-lg text-gray-300">
+          <ion-icon name="call-outline" class="text-green-500 text-2xl"></ion-icon>
+          <span class="font-semibold text-white">+91 6386571041</span>
+        </p>
+
+        <p class="flex items-center gap-3 text-lg text-gray-300">
+          <ion-icon name="mail-outline" class="text-green-500 text-2xl"></ion-icon>
+          <span class="font-semibold text-white">rajbharshyambahari@gmail.com</span>
+        </p>
+
+        <p class="flex items-center gap-3 text-lg text-gray-300">
+          <ion-icon name="location-outline" class="text-green-500 text-2xl"></ion-icon>
+          <span class="font-semibold text-white">Dumariyaganj 272189, Uttar Pradesh</span>
+        </p>
+
+      </div>
+
+      <!-- FORM (DESIGN SAME, FUNCTION UPDATED) -->
+      <form 
+        onsubmit="sendWhatsApp(event)"
+        class="grid gap-6 bg-[#0f0f0f] p-8 rounded-xl shadow-lg"
+      >
+        <input 
+          type="text" 
+          id="name"
+          placeholder="Your Name" 
+          class="bg-[#111] p-3 rounded-lg outline-none"
+          required
+        />
+
+        <input 
+          type="email" 
+          id="email"
+          placeholder="Your Email" 
+          class="bg-[#111] p-3 rounded-lg outline-none"
+          required
+        />
+
+        <input 
+          type="text" 
+          id="phone"
+          placeholder="Your Phone Number" 
+          class="bg-[#111] p-3 rounded-lg outline-none"
+          required
+        />
+
+        <textarea 
+          id="message"
+          placeholder="Your Message" 
+          rows="6" 
+          class="bg-[#111] p-3 rounded-lg outline-none"
+          required
+        ></textarea>
+
+        <button class="bg-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-700">
+          Send Message
+        </button>
+      </form>
+
+    </div>
+
+    <!-- RIGHT SIDE IMAGE -->
+    <img 
+      src="phone.png" 
+      class="rounded-xl shadow-lg w-full h-full object-cover" 
+      data-aos="fade-left" 
+    />
+  </div>
+</section>
+
+<script>
+function sendWhatsApp(event) {
+  event.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+  let msg = document.getElementById("message").value;
+
+  // 👇 Yaha AAPKA WhatsApp Number Dalo
+  let whatsappNumber = "919876543210";
+
+  let url = `https://wa.me/${whatsappNumber}?text=` + 
+            "New Contact Form Message👇%0A%0A" +
+            "👤 Name: " + name + "%0A" +
+            "📧 Email: " + email + "%0A" +
+            "📞 Phone: " + phone + "%0A" +
+            "💬 Message: " + msg;
+
+  window.open(url, "_blank");
+}
+</script>
+
+
+
+<!---------------------- FOOTER -------------------------->
+<footer class="bg-[#101010] py-6 text-center text-gray-400">
+  <p>© 2025 Your Name — All Rights Reserved</p>
+</footer>
+
+<!-- Icons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!---------------------- SCRIPT -------------------------->
+<script>
+  AOS.init();
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  // Active Link
+  const links = document.querySelectorAll(".nav-link, .mobile-link");
+
+  links.forEach(link => {
+    link.addEventListener("click", function () {
+      links.forEach(l => l.classList.remove("active-link"));
+      this.classList.add("active-link");
+      mobileMenu.classList.add("hidden");
+    });
+  });
+
+  // Smooth Scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      target.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+</script>
+
+</body>
+</html>
